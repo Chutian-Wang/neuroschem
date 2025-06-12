@@ -1,0 +1,41 @@
+[project]
+name            = "neuroschem"
+version         = "0.0.1a0"                      # pre-alpha claim
+description     = "AI-assisted schematic generation & validation"
+readme          = { file = "README.md", content-type = "text/markdown" }
+license         = { file = "LICENSE" }
+requires-python = ">=3.9"
+
+authors = [
+  { name = "Barry Wang", email = "barry_wang02@163.com" }
+]
+
+keywords = ["EDA", "schematic", "AI", "netlist", "auto-layout"]
+
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+
+urls = {homepage = "https://github.com/Chutian-Wang/neuroschem", bug_tracker = "https://github.com/Chutian-Wang/neuroschem/issues"}
+
+dependencies = [
+  "pydantic>=2.7",
+  "schemdraw>=0.20"
+]
+
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# If you use a src/ layout, add:
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
